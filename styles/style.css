@@ -6,3 +6,64 @@
 *::after {
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #644bff;
+  min-height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 4px black;
+}
+
+.autoSearch {
+  top: 0;
+  display: flex;
+  width: 400px;
+  height: 50px;
+  /* border-radius: 4px; */
+  background: #fff;
+}
+
+.autoSearch__input {
+  border-radius: 4px;
+  flex-grow: 1;
+  height: 100%;
+  border: none;
+  font-size: 1.25rem;
+  padding: 0.9375rem 1.25rem; /*15px 20px*/
+}
+
+.autoSearch__input:focus {
+  outline: none;
+}
+
+.autoSearch__button {
+  padding: 0;
+  width: 50px;
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+}
+
+.result {
+  background: #fff;
+  width: 100%;
+  position: relative;
+}
+
+.result__block {
+  padding: 0.9375rem 1.25rem;
+}
+
+.result__block:first-child {
+  box-shadow: 2px solid black;
+}
