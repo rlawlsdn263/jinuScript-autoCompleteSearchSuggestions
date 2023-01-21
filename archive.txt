@@ -1,7 +1,18 @@
 2023.01.20(금)
 
+- https://www.youtube.com/watch?v=QxMBHi_ZiT8&t=145s
+
 - 검색창에 입력, 제거가 일어나면 change 이벤트리스너 발동
 - forEach로 배열 안의 목록들 가져와서 보여줌
 - 대소문자 구분X, toLowerCase()
 - 클릭하면 input값이 그걸로 바뀜
 - 클릭할 경우 url로 이동하게 했음..? (optional)
+
+2023.01.21(토)
+
+- 배열에 forEach로 항목 가져와서 input.value와 비교했음
+- change 이벤트인 줄 알았는데 input 이벤트였음
+- https://dev.to/walternascimentobarroso/autocomplete-with-js-551f
+- https://www.w3schools.com/howto/howto_js_autocomplete.asp
+- https://www.geeksforgeeks.org/javascript-auto-complete-suggestion-feature/
+- https://www.codingnepalweb.com/search-bar-autocomplete-search-suggestions-javascript/

@@ -3,6 +3,8 @@ const result = document.querySelector(".result");
 
 const searchArray = ["우왁굳", "엔젤님", "메시"];
 
+let results;
+
 function createSearchTemplate(item) {
   return `
     <div class="result__block">
@@ -11,8 +13,18 @@ function createSearchTemplate(item) {
   `;
 }
 
+function preventDuplicate(array) {
+  let newArr = [...array];
+  newArr.forEach((item) => {
+    if (newArr.includes(item)) return;
+  });
+}
+
 function renderSearchTemplate(item) {
   result.insertAdjacentHTML("beforeend", createSearchTemplate(item));
+  results = document.querySelectorAll(".result__block");
+  preventDuplicate(results);
+  console.log(results);
 }
 
 /* function removeSearchTemplate(item) {
@@ -21,13 +33,11 @@ function renderSearchTemplate(item) {
 } */
 
 function checkSearchResult(value) {
+  if (!value) return;
   searchArray.forEach((item) => {
-    if (item === value) {
+    if (item.includes(value)) {
       renderSearchTemplate(item);
     }
-    /*     else {
-      removeSearchTemplate(item);
-    } */
   });
 }
 
@@ -36,3 +46,7 @@ input.addEventListener("input", (e) => {
   console.log(inputValue);
   checkSearchResult(inputValue);
 });
+
+/* removeSearchResult() {
+
+} */
