@@ -42,7 +42,6 @@ inputBox.addEventListener("keyup", (e) => {
     emptyArray = emptyArray.map((data) => {
       return (data = `<li>${data}</li>`);
     });
-    console.log(emptyArray);
     searchWrapper.classList.add("active"); //autocomplete 보기
     showSuggestions(emptyArray);
     let allList = suggBox.querySelectorAll("li");
